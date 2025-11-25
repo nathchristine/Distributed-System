@@ -1,0 +1,9 @@
+#!/bin/bash
+
+python3 peer_node.py \
+	  --name A --listen 192.168.122.107 5000 \
+	  --peers A@192.168.122.107:5000 B@192.168.122.166:5001 C@192.168.122.65:5002 D@192.168.122.17:5003 \
+	  --logger 192.168.122.77 9999 \
+	  --offset-ms 600 \
+	  --initiate-broadcast --msg "Hello from A"
+
